@@ -1,0 +1,130 @@
+:root {
+	/* Shopify Navigation Bar Colors */
+	--nav50: #656266;
+	--nav100: #616161;
+	--nav200: #322f33;
+	--nav300: #1c181d;
+
+	/* Font Colors */
+	--light: #e3e3e3;
+	--mid: #616161;
+	--dark: #475467;
+
+	/* Stroke Colors */
+	--stroke50: #ebebeb;
+	--stroke100: rgba(0, 0, 0, 0.07);
+	--stroke200: rgba(255, 255, 255, 0.2);
+	--nav-search-stroke: #b5b5b5;
+
+	/* State Colors */
+	--hover: #f7f7f7;
+	--pressed: #f0f0f0;
+	--focused: #005bd3;
+
+	/* Plain Colors */
+	--white: #ffffff;
+	--background: #f1f1f1;
+}
+
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Inter", sans-serif;
+}
+
+/* Typography - line-height and font-weight */
+.lineheight-13 {
+	line-height: 1.3;
+}
+
+.lineheight-14 {
+	line-height: 1.4;
+}
+
+.fontweight-400 {
+	font-weight: 400;
+}
+
+.fontweight-500 {
+	font-weight: 500;
+}
+
+.fontweight-600 {
+	font-weight: 600;
+}
+
+.fontsize-12 {
+	font-size: 12px;
+}
+
+.fontsize-13 {
+	font-size: 13px;
+}
+
+.fontsize-14 {
+	font-size: 14px;
+}
+
+body {
+	background: var(--background);
+}
+
+/* header styles */
+header {
+	display: flex;
+	align-items: center;
+	background-color: var(--nav300);
+	padding: 12px 15px;
+}
+
+header .search {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex: 1;
+	border-radius: 10px;
+	border: 1px solid var(--nav100);
+	background-color: var(--nav200);
+	padding: 8px;
+	margin-left: 8px;
+}
+
+header .search svg path {
+	fill: #b5b5b5;
+}
+
+header .search input#input-search {
+	padding: 2px;
+	background-color: var(--nav200);
+	border: 0;
+	margin-left: 6px;
+	color: #b5b5b5;
+}
+
+header .search input#input-search::placeholder {
+	font-weight: 500;
+	font-size: 13px;
+	color: #b5b5b5;
+}
+
+header .notification-icon {
+	margin: 0 8px;
+}
+
+header .menu {
+	height: 32px;
+	width: 32px;
+	background-color: rgb(54, 251, 161);
+	color: rgba(0, 0, 0, 0.4);
+	border-radius: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2px;
+}
+
+/* Desktop Styles- */
+@media screen and (min-width: 768px) {
+}
