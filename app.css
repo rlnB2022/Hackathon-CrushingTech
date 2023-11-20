@@ -24,6 +24,10 @@
 	/* Plain Colors */
 	--white: #ffffff;
 	--background: #f1f1f1;
+
+	/* Other Colors */
+	--dark-bg: #1a1a1a;
+	--font-dark: #323232;
 }
 
 /* Reset */
@@ -123,6 +127,29 @@ header .menu {
 	justify-content: center;
 	align-items: center;
 	margin: 2px;
+}
+
+/* main styles */
+main {
+	margin-top: 30px;
+}
+
+main .trial-callout-container {
+	background-color: var(--dark-bg);
+	display: flex;
+	padding: 12px 8px 12px 18px;
+}
+
+main .trial-callout-container .trial-callout-details p {
+	color: var(--light);
+}
+
+main .trial-callout-container .trial-callout-details .select-a-plan {
+	border-radius: 6px;
+	border: 1px solid var(--white);
+	padding: 6px 12px;
+	color: var(--font-dark);
+	margin-top: 16px;
 }
 
 /* Desktop Styles- */
