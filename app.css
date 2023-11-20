@@ -184,6 +184,8 @@ main
 	.setup-guide-details
 	.setup-guide-progress-bar {
 	width: 72px;
+	margin-left: 8px;
+	accent-color: black;
 }
 
 main .setup-guide-container .inner-guide .setup-guide-toggle img.active {
