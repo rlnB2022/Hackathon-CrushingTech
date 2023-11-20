@@ -187,9 +187,14 @@ main
 	margin-left: 8px;
 	accent-color: black;
 }
-
-main .setup-guide-container .inner-guide .setup-guide-toggle img.active {
+/* 
+main .setup-guide-container .inner-guide img {
+	display: none;
 }
+
+main .setup-guide-container .inner-guide img.active {
+	display: block;
+} */
 
 /* Desktop Styles- */
 @media screen and (min-width: 768px) {
