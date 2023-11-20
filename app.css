@@ -88,10 +88,10 @@ header .search {
 	display: flex;
 	align-items: center;
 	flex: 1;
-	border-radius: 10px;
+	border-radius: 8px;
 	border: 1px solid var(--nav100);
 	background-color: var(--nav200);
-	padding: 8px;
+	padding: 5px;
 	margin-left: 8px;
 }
 
@@ -129,10 +129,11 @@ header .menu {
 	margin: 2px;
 }
 
-/* main styles */
 main {
 	margin-top: 30px;
 }
+
+/* Trial Callout */
 
 main .trial-callout-container {
 	background-color: var(--dark-bg);
@@ -150,6 +151,42 @@ main .trial-callout-container .trial-callout-details .select-a-plan {
 	padding: 6px 12px;
 	color: var(--font-dark);
 	margin-top: 16px;
+}
+
+/* Setup Guide */
+main .setup-guide-container {
+	background-color: var(--white);
+	margin-top: 16px;
+	padding: 8px;
+}
+
+main .setup-guide-container .inner-guide {
+	padding: 8px;
+	display: flex;
+}
+
+main .setup-guide-container .inner-guide .setup-guide-details {
+	flex: 1;
+}
+
+main .setup-guide-container .inner-guide .setup-guide-details .completed {
+	display: flex;
+	margin-top: 16px;
+}
+
+main .setup-guide-container .inner-guide .setup-guide-details h1 {
+	margin-bottom: 4px;
+}
+
+main
+	.setup-guide-container
+	.inner-guide
+	.setup-guide-details
+	.setup-guide-progress-bar {
+	width: 72px;
+}
+
+main .setup-guide-container .inner-guide .setup-guide-toggle img.active {
 }
 
 /* Desktop Styles- */
