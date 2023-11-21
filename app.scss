@@ -1,0 +1,209 @@
+:root {
+	/* Shopify Navigation Bar Colors */
+	--nav50: #656266;
+	--nav100: #616161;
+	--nav200: #322f33;
+	--nav300: #1c181d;
+
+	/* Font Colors */
+	--light: #e3e3e3;
+	--mid: #616161;
+	--dark: #475467;
+
+	/* Stroke Colors */
+	--stroke50: #ebebeb;
+	--stroke100: rgba(0, 0, 0, 0.07);
+	--stroke200: rgba(255, 255, 255, 0.2);
+	--nav-search-stroke: #b5b5b5;
+
+	/* State Colors */
+	--hover: #f7f7f7;
+	--pressed: #f0f0f0;
+	--focused: #005bd3;
+
+	/* Plain Colors */
+	--white: #ffffff;
+	--background: #f1f1f1;
+
+	/* Other Colors */
+	--dark-bg: #1a1a1a;
+	--font-dark: #323232;
+}
+
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Inter", sans-serif;
+}
+
+/* Typography - line-height and font-weight */
+.lineheight-13 {
+	line-height: 1.3;
+}
+
+.lineheight-14 {
+	line-height: 1.4;
+}
+
+.fontweight-400 {
+	font-weight: 400;
+}
+
+.fontweight-500 {
+	font-weight: 500;
+}
+
+.fontweight-600 {
+	font-weight: 600;
+}
+
+.fontsize-12 {
+	font-size: 12px;
+}
+
+.fontsize-13 {
+	font-size: 13px;
+}
+
+.fontsize-14 {
+	font-size: 14px;
+}
+
+body {
+	background: var(--background);
+}
+
+/* header styles */
+header {
+	display: flex;
+	align-items: center;
+	background-color: var(--nav300);
+	padding: 12px 15px;
+
+	.search {
+		position: relative;
+		display: flex;
+		align-items: center;
+		flex: 1;
+		border-radius: 8px;
+		border: 1px solid var(--nav100);
+		background-color: var(--nav200);
+		padding: 5px;
+		margin-left: 8px;
+
+		svg path {
+			fill: #b5b5b5;
+		}
+
+		input {
+			&#input-search {
+				padding: 2px;
+				background-color: var(--nav200);
+				border: 0;
+				margin-left: 6px;
+				color: #b5b5b5;
+				&::placeholder {
+					font-weight: 500;
+					font-size: 13px;
+					color: #b5b5b5;
+				}
+			}
+		}
+	}
+	.notification-icon {
+		margin: 8px;
+	}
+	.menu {
+		height: 32px;
+		width: 32px;
+		background-color: rgb(54, 251, 161);
+		color: rgba(0, 0, 0, 0.4);
+		border-radius: 6px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 2px;
+	}
+}
+
+main {
+	margin-top: 30px;
+}
+
+/* Trial Callout */
+
+main {
+	.trial-callout-container {
+		background-color: var(--dark-bg);
+		display: flex;
+		padding: 12px 8px 12px 18px;
+
+		.trial-callout-details {
+			p {
+				color: var(--light);
+			}
+			.select-a-plan {
+				border-radius: 6px;
+				border: 1px solid var(--white);
+				padding: 6px 12px;
+				color: var(--font-dark);
+				margin-top: 16px;
+			}
+		}
+	}
+}
+
+/* Setup Guide */
+.setup-guide-container {
+	background-color: var(--white);
+	margin-top: 16px;
+	padding: 8px;
+
+	.inner-guide {
+		padding: 8px;
+		display: flex;
+		.setup-guide-details {
+			flex: 1;
+			.completed {
+				display: flex;
+				margin-top: 16px;
+			}
+			h1 {
+				margin-bottom: 4px;
+			}
+			.setup-guide-progress-bar {
+				width: 72px;
+				margin-left: 8px;
+				accent-color: black;
+			}
+		}
+	}
+
+	/* Options List */
+	ul {
+		margin-top: 16px;
+		list-style-type: none;
+		li {
+			background-size: 10px;
+			font-size: 13px;
+			font-weight: 500;
+			margin: 8px;
+			.option-container {
+				display: flex;
+				align-items: center;
+			}
+			.guide-option {
+				margin-right: 8px;
+			}
+			.option-details {
+				margin: 16px 0;
+			}
+		}
+	}
+}
+
+/* Desktop Styles- */
+@media screen and (min-width: 768px) {
+}
