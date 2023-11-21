@@ -172,17 +172,20 @@ main .trial-callout-container .trial-callout-details .select-a-plan {
   accent-color: black;
 }
 .setup-guide-container ul {
+  display: none;
   margin-top: 16px;
   list-style-type: none;
-  background-color: var(--light-bg);
-  border-radius: 8px;
-  padding: 8px;
+}
+.setup-guide-container ul.active {
+  display: block;
 }
 .setup-guide-container ul li {
+  padding: 8px 8px 12px;
+  border-radius: 8px;
+  background-color: var(--light-bg);
   background-size: 10px;
   font-size: 13px;
   font-weight: 500;
-  margin: 8px;
 }
 .setup-guide-container ul li .option-container {
   display: flex;
@@ -207,11 +210,17 @@ main .trial-callout-container .trial-callout-details .select-a-plan {
 .setup-guide-container ul li .option-details p a:link, .setup-guide-container ul li .option-details p a:visited, .setup-guide-container ul li .option-details p a:active {
   color: blue;
 }
-.setup-guide-container ul li button.customize-theme {
+.setup-guide-container ul li button.option-button {
   border-radius: 6px;
   padding: 6px 12px;
   color: #f6f3f6;
   background-color: #404040;
+  cursor: pointer;
+}
+.setup-guide-container ul li button.option-button.button-link {
+  background: none;
+  color: var(--font-dark);
+  border: none;
 }
 
 /* Desktop Styles- */

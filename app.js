@@ -7,6 +7,7 @@ const guideImage = document.querySelector("#setup-guide-toggle img");
  */
 const toggleGuide = () => {
 	const innerGuide = document.querySelector(".inner-guide");
+	const ul = document.getElementById("guide-list");
 
 	const imageArray = [
 		"https://crushingit.tech/hackathon-assets/icon-arrow-down.svg",
@@ -20,6 +21,9 @@ const toggleGuide = () => {
 
 	// set active class on .inner-guide so the accordion will display/hide
 	innerGuide.classList.toggle("active");
+
+	// toggle the guide-list UL
+	ul.classList.toggle("active");
 };
 
 setupGuideToggle.addEventListener("click", toggleGuide);

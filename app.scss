@@ -184,16 +184,19 @@ main {
 
 	/* Options List */
 	ul {
+		display: none;
 		margin-top: 16px;
 		list-style-type: none;
-		background-color: var(--light-bg);
-		border-radius: 8px;
-		padding: 8px;
+		&.active {
+			display: block;
+		}
 		li {
+			padding: 8px 8px 12px;
+			border-radius: 8px;
+			background-color: var(--light-bg);
 			background-size: 10px;
 			font-size: 13px;
 			font-weight: 500;
-			margin: 8px;
 			.option-container {
 				display: flex;
 				align-items: flex-start;
@@ -220,11 +223,17 @@ main {
 				}
 			}
 			button {
-				&.customize-theme {
+				&.option-button {
 					border-radius: 6px;
 					padding: 6px 12px;
 					color: #f6f3f6;
 					background-color: #404040;
+					cursor: pointer;
+					&.button-link {
+						background: none;
+						color: var(--font-dark);
+						border: none;
+					}
 				}
 			}
 		}
