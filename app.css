@@ -23,6 +23,7 @@
   /* Other Colors */
   --dark-bg: #1a1a1a;
   --font-dark: #323232;
+  --light-bg: #f3f3f3;
 }
 
 /* Reset */
@@ -173,6 +174,9 @@ main .trial-callout-container .trial-callout-details .select-a-plan {
 .setup-guide-container ul {
   margin-top: 16px;
   list-style-type: none;
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  padding: 8px;
 }
 .setup-guide-container ul li {
   background-size: 10px;
@@ -182,13 +186,32 @@ main .trial-callout-container .trial-callout-details .select-a-plan {
 }
 .setup-guide-container ul li .option-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .setup-guide-container ul li .guide-option {
   margin-right: 8px;
 }
+.setup-guide-container ul li .guide-option-right {
+  margin-top: 4px;
+}
 .setup-guide-container ul li .option-details {
   margin: 16px 0;
+}
+.setup-guide-container ul li .option-details p {
+  display: inline-block;
+}
+.setup-guide-container ul li .option-details p a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.setup-guide-container ul li .option-details p a:link, .setup-guide-container ul li .option-details p a:visited, .setup-guide-container ul li .option-details p a:active {
+  color: blue;
+}
+.setup-guide-container ul li button.customize-theme {
+  border-radius: 6px;
+  padding: 6px 12px;
+  color: #f6f3f6;
+  background-color: #404040;
 }
 
 /* Desktop Styles- */

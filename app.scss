@@ -28,6 +28,7 @@
 	/* Other Colors */
 	--dark-bg: #1a1a1a;
 	--font-dark: #323232;
+	--light-bg: #f3f3f3;
 }
 
 /* Reset */
@@ -185,6 +186,9 @@ main {
 	ul {
 		margin-top: 16px;
 		list-style-type: none;
+		background-color: var(--light-bg);
+		border-radius: 8px;
+		padding: 8px;
 		li {
 			background-size: 10px;
 			font-size: 13px;
@@ -192,13 +196,36 @@ main {
 			margin: 8px;
 			.option-container {
 				display: flex;
-				align-items: center;
+				align-items: flex-start;
 			}
 			.guide-option {
 				margin-right: 8px;
 			}
+			.guide-option-right {
+				margin-top: 4px;
+			}
 			.option-details {
 				margin: 16px 0;
+				p {
+					display: inline-block;
+					a {
+						text-decoration: none;
+						cursor: pointer;
+						&:link,
+						&:visited,
+						&:active {
+							color: blue;
+						}
+					}
+				}
+			}
+			button {
+				&.customize-theme {
+					border-radius: 6px;
+					padding: 6px 12px;
+					color: #f6f3f6;
+					background-color: #404040;
+				}
 			}
 		}
 	}
