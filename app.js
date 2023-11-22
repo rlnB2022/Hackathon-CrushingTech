@@ -1,5 +1,5 @@
 /* Setup guide */
-const setupGuideToggle = document.getElementById("setup-guide-toggle");
+const setupGuideToggle = document.querySelector("#setup-guide-toggle img");
 const guideImage = document.querySelector("#setup-guide-toggle img");
 
 /**
