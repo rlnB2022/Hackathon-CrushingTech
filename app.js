@@ -2,6 +2,24 @@
 const setupGuideToggle = document.querySelector("#setup-guide-toggle img");
 const guideImage = document.querySelector("#setup-guide-toggle img");
 
+/* Setup option event listeners */
+const optionListItems = document.querySelectorAll(
+	".setup-guide-container ul li"
+);
+
+Array.from(optionListItems).forEach((listItem) => {
+	listItem.addEventListener("click", () => {
+		if (!listItem.classList.contains("active-option")) {
+			// get listItem that DOES have the active-option and remove it
+			const activeOption = document.querySelector(".active-option");
+			activeOption.classList.remove("active-option");
+
+			// add active-option class to clicked on listItem
+			listItem.classList.add("active-option");
+		}
+	});
+});
+
 /**
  * Toggle Guide selector
  */
@@ -25,5 +43,7 @@ const toggleGuide = () => {
 	// toggle the guide-list UL
 	ul.classList.toggle("active");
 };
+
+const changeOptionSelected = () => {};
 
 setupGuideToggle.addEventListener("click", toggleGuide);

@@ -29,6 +29,9 @@
 	--dark-bg: #1a1a1a;
 	--font-dark: #323232;
 	--light-bg: #f3f3f3;
+
+	/* Links */
+	--link-blue: #005bd3;
 }
 
 /* Reset */
@@ -193,49 +196,77 @@ main {
 		li {
 			padding: 8px 8px 12px;
 			border-radius: 8px;
-			background-color: var(--light-bg);
 			background-size: 10px;
 			font-size: 13px;
 			font-weight: 500;
+
 			.option-container {
-				display: flex;
-				align-items: flex-start;
-			}
-			.guide-option {
-				margin-right: 8px;
-			}
-			.guide-option-right {
-				margin-top: 4px;
-			}
-			.option-details {
-				margin: 16px 0;
-				p {
-					display: inline-block;
-					a {
-						text-decoration: none;
-						cursor: pointer;
-						&:link,
-						&:visited,
-						&:active {
-							color: blue;
+				.option-header {
+					display: flex;
+					align-items: center;
+
+					p {
+						margin-left: 10px;
+					}
+
+					svg {
+						fill: var(--white);
+					}
+				}
+				.option-details {
+					margin-left: 34px;
+					display: none;
+					p {
+						margin: 16px 0;
+						display: inline-block;
+						a {
+							text-decoration: none;
+							cursor: pointer;
+							&:link,
+							&:visited,
+							&:active {
+								color: var(--link-blue);
+							}
+						}
+					}
+					button {
+						&.option-button {
+							border-radius: 6px;
+							padding: 6px 12px;
+							color: #f6f3f6;
+							background-color: #404040;
+							cursor: pointer;
+							&.button-link {
+								background: none;
+								color: var(--font-dark);
+								border: none;
+							}
 						}
 					}
 				}
 			}
-			button {
-				&.option-button {
-					border-radius: 6px;
-					padding: 6px 12px;
-					color: #f6f3f6;
-					background-color: #404040;
-					cursor: pointer;
-					&.button-link {
-						background: none;
-						color: var(--font-dark);
-						border: none;
+			&.active-option {
+				background-color: var(--light-bg);
+				.option-container {
+					.option-header {
+						svg {
+							fill: var(--light-bg);
+							circle {
+								stroke: #8a8a8a;
+							}
+						}
+					}
+					.option-details {
+						display: block;
 					}
 				}
 			}
+			// .guide-option {
+			// 	margin-right: 8px;
+			// }
+			// .guide-option-right {
+			// 	margin-top: 4px;
+			// }
 		}
 	}
 }

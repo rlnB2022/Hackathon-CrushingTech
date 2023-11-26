@@ -24,6 +24,8 @@
   --dark-bg: #1a1a1a;
   --font-dark: #323232;
   --light-bg: #f3f3f3;
+  /* Links */
+  --link-blue: #005bd3;
 }
 
 /* Reset */
@@ -182,45 +184,58 @@ main .trial-callout-container .trial-callout-details .select-a-plan {
 .setup-guide-container ul li {
   padding: 8px 8px 12px;
   border-radius: 8px;
-  background-color: var(--light-bg);
   background-size: 10px;
   font-size: 13px;
   font-weight: 500;
 }
-.setup-guide-container ul li .option-container {
+.setup-guide-container ul li .option-container .option-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
-.setup-guide-container ul li .guide-option {
-  margin-right: 8px;
+.setup-guide-container ul li .option-container .option-header p {
+  margin-left: 10px;
 }
-.setup-guide-container ul li .guide-option-right {
-  margin-top: 4px;
+.setup-guide-container ul li .option-container .option-header svg {
+  fill: var(--white);
 }
-.setup-guide-container ul li .option-details {
+.setup-guide-container ul li .option-container .option-details {
+  margin-left: 34px;
+  display: none;
+}
+.setup-guide-container ul li .option-container .option-details p {
   margin: 16px 0;
-}
-.setup-guide-container ul li .option-details p {
   display: inline-block;
 }
-.setup-guide-container ul li .option-details p a {
+.setup-guide-container ul li .option-container .option-details p a {
   text-decoration: none;
   cursor: pointer;
 }
-.setup-guide-container ul li .option-details p a:link, .setup-guide-container ul li .option-details p a:visited, .setup-guide-container ul li .option-details p a:active {
-  color: blue;
+.setup-guide-container ul li .option-container .option-details p a:link, .setup-guide-container ul li .option-container .option-details p a:visited, .setup-guide-container ul li .option-container .option-details p a:active {
+  color: var(--link-blue);
 }
-.setup-guide-container ul li button.option-button {
+.setup-guide-container ul li .option-container .option-details button.option-button {
   border-radius: 6px;
   padding: 6px 12px;
   color: #f6f3f6;
   background-color: #404040;
   cursor: pointer;
 }
-.setup-guide-container ul li button.option-button.button-link {
+.setup-guide-container ul li .option-container .option-details button.option-button.button-link {
   background: none;
   color: var(--font-dark);
   border: none;
+}
+.setup-guide-container ul li.active-option {
+  background-color: var(--light-bg);
+}
+.setup-guide-container ul li.active-option .option-container .option-header svg {
+  fill: var(--light-bg);
+}
+.setup-guide-container ul li.active-option .option-container .option-header svg circle {
+  stroke: #8a8a8a;
+}
+.setup-guide-container ul li.active-option .option-container .option-details {
+  display: block;
 }
 
 /* Desktop Styles- */
