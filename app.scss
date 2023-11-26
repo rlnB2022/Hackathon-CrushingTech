@@ -150,15 +150,36 @@ header {
 			width: 85%;
 			background-color: white;
 			border-radius: 8px;
-			padding: 6px;
+			border: 1px solid #d8d8d8;
+			box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+			color: var(--font-dark);
 			// display: none;
 
 			ul {
 				list-style-type: none;
 				li {
+					padding: 2px 8px 2px;
 					font-size: 13px;
 					font-weight: 400;
-					padding: 8px;
+
+					&.li-separator {
+						border-top: 1px solid #e1e1e1;
+					}
+
+					.li-content {
+						padding: 8px;
+						border-radius: 8px;
+					}
+
+					.background-highlighted {
+						background-color: var(--background);
+						padding: 4px 8px;
+					}
+
+					img {
+						margin-right: 8px;
+						margin-left: -4px;
+					}
 
 					.initials {
 						background-color: rgb(54, 251, 161);
@@ -172,6 +193,12 @@ header {
 
 					.collection {
 						margin-left: 8px;
+					}
+
+					p {
+						&.email {
+							color: var(--nav100);
+						}
 					}
 				}
 			}
