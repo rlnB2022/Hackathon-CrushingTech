@@ -144,6 +144,11 @@ main {
 		display: flex;
 		padding: 12px 8px 12px 18px;
 
+		&.hidden {
+			visibility: none;
+			opacity: 0;
+		}
+
 		.trial-callout-details {
 			p {
 				color: var(--light);
@@ -155,6 +160,10 @@ main {
 				color: var(--font-dark);
 				margin-top: 16px;
 			}
+		}
+		.trial-callout-close {
+			height: 20px;
+			width: 20px;
 		}
 	}
 }

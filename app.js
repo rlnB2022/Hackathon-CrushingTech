@@ -1,8 +1,12 @@
-/* Setup guide */
+/* Setup guide elements */
 const setupGuideToggle = document.querySelector("#setup-guide-toggle img");
 const guideImage = document.querySelector("#setup-guide-toggle img");
+const trialCalloutCloseButton = document.querySelector(".trial-callout-close");
 
-/* Setup option event listeners */
+/**
+ * Setup option event listeners
+ */
+
 const optionListItems = document.querySelectorAll(
 	".setup-guide-container ul li"
 );
@@ -44,6 +48,14 @@ const toggleGuide = () => {
 	ul.classList.toggle("active");
 };
 
-const changeOptionSelected = () => {};
+/**
+ * Hide Trial Callout Container
+ */
+trialCalloutCloseButton.addEventListener("click", () => {
+	const trialCalloutContainer = document.querySelector(
+		".trial-callout-container"
+	);
+	trialCalloutContainer.classList.add("hidden");
+});
 
 setupGuideToggle.addEventListener("click", toggleGuide);
