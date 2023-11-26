@@ -75,6 +75,18 @@
 	font-size: 14px;
 }
 
+.flex {
+	display: flex;
+}
+
+.ai-center {
+	align-items: center;
+}
+
+.jc-space {
+	justify-content: space-between;
+}
+
 body {
 	background: var(--background);
 }
@@ -85,6 +97,7 @@ header {
 	align-items: center;
 	background-color: var(--nav300);
 	padding: 12px 15px;
+	position: relative;
 
 	.search {
 		position: relative;
@@ -129,6 +142,43 @@ header {
 		justify-content: center;
 		align-items: center;
 		margin: 2px;
+
+		.menu-container {
+			position: absolute;
+			top: calc(100% + 12px);
+			right: 12px;
+			width: 85%;
+			background-color: white;
+			border-radius: 8px;
+			padding: 6px;
+			// display: none;
+
+			ul {
+				list-style-type: none;
+				li {
+					font-size: 13px;
+					font-weight: 400;
+					padding: 8px;
+
+					.initials {
+						background-color: rgb(54, 251, 161);
+						height: 28px;
+						width: 28px;
+						border-radius: 6px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+
+					.collection {
+						margin-left: 8px;
+					}
+				}
+			}
+			&.active {
+				display: block;
+			}
+		}
 	}
 }
 
