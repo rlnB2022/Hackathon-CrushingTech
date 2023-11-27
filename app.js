@@ -2,6 +2,7 @@
 const setupGuideToggle = document.querySelector("#setup-guide-toggle img");
 const guideImage = document.querySelector("#setup-guide-toggle img");
 const trialCalloutCloseButton = document.querySelector(".trial-callout-close");
+const collectionDropdown = document.querySelector(".menu");
 
 /**
  * Setup option event listeners
@@ -56,6 +57,15 @@ trialCalloutCloseButton.addEventListener("click", () => {
 		".trial-callout-container"
 	);
 	trialCalloutContainer.classList.add("hidden");
+});
+
+/**
+ * Menu Container Toggle
+ */
+
+collectionDropdown.addEventListener("click", () => {
+	const menuCollection = document.querySelector(".menu-collection");
+	menuCollection.classList.toggle("menu-visible");
 });
 
 setupGuideToggle.addEventListener("click", toggleGuide);

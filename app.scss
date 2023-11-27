@@ -153,7 +153,11 @@ header {
 			border: 1px solid #d8d8d8;
 			box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
 			color: var(--font-dark);
-			// display: none;
+			display: none;
+
+			&.menu-visible {
+				display: block;
+			}
 
 			ul {
 				list-style-type: none;
